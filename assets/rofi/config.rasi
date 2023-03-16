@@ -1,0 +1,13 @@
+/** Basic config file **/
+
+configuration {
+  show-icons: true;
+  icon-theme: "Papirus";
+  display-drun: "";
+  display-window: "﩯 ";
+  display-combi: "  ";
+}
+//@theme "themes/sidetab-nord.rasi"
+//@theme "/home/frazer/.config/rofi/themes/catppuccin-mocha.rasi"
+//@theme "/usr/share/rofi/themes/dmenu.rasi"
+@theme "/home/frazer/.config/rofi/themes/catppuccin-mocha.rasi"
