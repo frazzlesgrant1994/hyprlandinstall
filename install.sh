@@ -8,7 +8,7 @@
 ### Veriables 
 
 workdir=$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)
- 
+uname=$(whoami)
 ### Functions #####
 #
 #
@@ -100,7 +100,7 @@ yayinstall (){
 	sudo chown -R $uname:$uname ./yay-git
 	cd yay-git
 	makepkg -si
-	cd $workdir/archinstall/
+	cd $workdir/
 }
 
 ## yay checker 
