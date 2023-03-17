@@ -130,11 +130,9 @@ if [ $system = "Arch-based" ]; then
     echo ""
     yaycheck
     sleep 1
+    yay -S $(archpkglist.txt) --noconfirm
     echo ""
-    yay -S gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info sway
-    yay -S hyprland-git rofi dunst kitty swaybg swaylock-fancy-git swayidle pamixer light brillo
-    yay -S bc blueberry bluez coreutils dbus findutils gawk gnunet jaq light networkmanager network-manager-applet pavucontrol playerctl procps ripgrep socat udev upower util-linux wget wireplumber wlogout eww-wayland pipewire-pulse
-    yay -S waybar-hyprland
+    
 fi
 }
 
@@ -144,7 +142,7 @@ fi
 ## Installes the required packages for Debian based systems 
 aptinstall(){
 if [ $system = "Debian-based" ]; then 
-    echo "We have Detected a Debian based system, this script currently wont work on this system."
+    echo "We have Detected a Debianed(0) based system, this script currently wont work on this system."
     echo ""
     pause
     exit 0
