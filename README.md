@@ -58,7 +58,7 @@ Although Hyprland is pretty stable, it may have some bugs.
 Resorce [hyprland](https://github.com/hyprwm/Hyprland)
 
 
-## What is Hyprland installer <a name="#aboutinstall">
+## What is Hyprland installer <a name="aboutinstall">
 <br>
 
 Hyprland installer is a set of scripts that make the install process easier. 
