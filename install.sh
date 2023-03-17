@@ -26,7 +26,18 @@ pause(){
 }
 
 ######################################
+## Check to make sure the scripts isnt being run as Root or sudo
 
+checkroot(){
+if [[ $EUID -ne 0 ]]; then
+   echo "" 
+   else
+   echo "Please don't run as Root. the script will ask for sudo password when needed."
+   exit 1
+fi
+}
+
+#######################################
 ## Welcome message and disclaimer, Just displays info 
 
 welcomemsg(){
@@ -59,37 +70,9 @@ exit 1
 #######################################
 
 
-## Check to make sure the scripts isnt being run as Root or sudo
-
-checkroot(){
-if [[ $EUID -ne 0 ]]; then
-   echo "" 
-   else
-   echo "Please don't run as Root. the script will ask for sudo password when needed."
-   exit 1
-fi
-}
-
-#######################################
-
-
 ## checks to see if the system is Arch, Debian or RHEL\Fedora based 
 
-checksystem(){
-if command -v pacman > /dev/null
-then
-    system="Arch-based"    
-fi
 
-if command -v apt > /dev/null
-then
-    system="Debian-based"
-fi
-if command -v dnf > /dev/null
-then
-    system="Fedora"
-fi
-}
 
 ########################################
 
@@ -110,9 +93,19 @@ yayinstall (){
 yaycheck(){
 if command -v yay > /dev/null
 then
- echo "Yay is already installed"
+ echo "Yay AUR Helper is already installed"
  else 
    yayinstall   
+fi
+
+}
+
+rsynccheck(){
+if command -v rsync > /dev/null
+then
+ echo "Rsync is already installed"
+ else 
+   sudo pacman -S rsync --noconfirm 
 fi
 
 }
@@ -129,37 +122,24 @@ if [ $system = "Arch-based" ]; then
     sleep 1
     echo ""
     yaycheck
+    rsynccheck
     sleep 1
-    yay -S gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info hyprland-git rofi dunst kitty swaybg swaylock-fancy-git swayidle pamixer light brillo bc blueberry bluez coreutils dbus findutils gawk gnunet jaq light networkmanager network-manager-applet pavucontrol playerctl procps ripgrep socat udev upower util-linux wget wireplumber wlogout eww-wayland pipewire-pulse waybar-hyprland
+### Install Hyprland-git 
+    yay -S hyprland-git
+
+### Install base Depends
+    yay -S rofi dunst kitty swaybg swaylock-fancy-git swayidle pamixer light brillo
+
+### Install eww bar Depends
+    yay -S bc blueberry bluez coreutils dbus findutils gawk gnunet jaq light networkmanager network-manager-applet pavucontrol playerctl procps ripgrep socat udev upower util-linux wget wireplumber wlogout eww-wayland pipewire-pulse
+
+### Install Waybar Depends
+    yay -S waybar-hyprland
+
+### Other Utils (screenshot, emoji)
+    yay -S grim swappy slurp rofi-emoji
     echo ""
     
-fi
-}
-
-#########################################
-
-
-## Installes the required packages for Debian based systems 
-aptinstall(){
-if [ $system = "Debian-based" ]; then 
-    echo "We have Detected a Debianed(0) based system, this script currently wont work on this system."
-    echo ""
-    pause
-    exit 0
-fi
-}
-
-#########################################
-
-## Installes the required packages for RHEL\Fedora based systems 
-
-dnfinstall(){
-if [ $system = "Fedora" ]; then 
-    echo ""
-    echo "We have Detected a Fedora\RHEL based system, this script currently wont work on this system."
-    echo ""
-    pause
-    exit 0
 fi
 }
 
@@ -169,10 +149,35 @@ fi
 ## copys config files to home dir 
 copyfiles(){
 mv assets/fonts ~/.fonts
-cp -r assets/* ~/.config/
+rsync -a assets/* ~/.config/
 fc-cache -fv
 }
 
+checksystem(){
+if command -v pacman > /dev/null
+then
+    yaycheck
+    pacmaninstall    
+fi
+
+elif command -v apt > /dev/null
+then
+    echo ""
+    echo "We have Detected a Debianed(0) based system, this script currently wont work on this system."
+    echo ""
+    pause
+    exit 0
+fi
+
+elif command -v dnf > /dev/null
+then
+    echo ""
+    echo "We have Detected a Fedora\RHEL based system, this script currently wont work on this system."
+    echo ""
+    pause
+    exit 0
+fi
+}
 
 
 #########################################
@@ -183,8 +188,4 @@ checkroot
 welcomemsg
 disclaimer
 checksystem
-aptinstall
-pacmaninstall
-dnfinstall
-copyfiles
 pause
