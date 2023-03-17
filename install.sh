@@ -124,7 +124,7 @@ fi
 
 pacmaninstall(){
 if [ $system = "Arch-based" ]; then 
-    echo ""q
+    echo ""
     echo "We have Detected an Arch-based system, we will now install all the required packages"
     sleep 1
     echo ""
@@ -144,7 +144,10 @@ fi
 ## Installes the required packages for Debian based systems 
 aptinstall(){
 if [ $system = "Debian-based" ]; then 
-    echo "We will now install the apt Dependencys"
+    echo "We have Detected a Debian based system, this script currently wont work on this system."
+    echo ""
+    pause
+    exit 0
 fi
 }
 
@@ -154,7 +157,11 @@ fi
 
 dnfinstall(){
 if [ $system = "Fedora" ]; then 
-    echo "We will now install the dnf Dependencys"
+    echo ""
+    echo "We have Detected a Fedora\RHEL based system, this script currently wont work on this system."
+    echo ""
+    pause
+    exit 0
 fi
 }
 
