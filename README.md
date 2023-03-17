@@ -4,9 +4,10 @@
 
 
 # Table of contents
-1. [What is Hyprland](#about)
-2. [Instalation](#instalation)
-3. [Configuration](#config)
+1. [What is Hyprland?](#about)
+2. [What is Hyprland installer?](#aboutinstall)
+3. [Instalation](#instalation)
+4. [Configuration](#config)
 
 
 
@@ -57,9 +58,10 @@ Although Hyprland is pretty stable, it may have some bugs.
 Resorce [hyprland](https://github.com/hyprwm/Hyprland)
 
 
+## What is Hyprland installer <a name="#aboutinstall">
+<br>
 
-
-
+Hyprland installer is a set of scripts that make the install process easier. 
 
 
 
