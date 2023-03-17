@@ -161,7 +161,7 @@ fi
 if command -v apt > /dev/null
 then
     echo ""
-    echo "We have Detected a Debianed(0) based system, this script currently wont work on this system."
+    echo "We have Detected a Debian based system, this script currently wont work on this system."
     echo ""
     pause
     exit 0
