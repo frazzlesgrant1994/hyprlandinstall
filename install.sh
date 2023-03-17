@@ -160,7 +160,7 @@ then
     pacmaninstall    
 fi
 
-elif command -v apt > /dev/null
+if command -v apt > /dev/null
 then
     echo ""
     echo "We have Detected a Debianed(0) based system, this script currently wont work on this system."
@@ -169,7 +169,7 @@ then
     exit 0
 fi
 
-elif command -v dnf > /dev/null
+if command -v dnf > /dev/null
 then
     echo ""
     echo "We have Detected a Fedora\RHEL based system, this script currently wont work on this system."
