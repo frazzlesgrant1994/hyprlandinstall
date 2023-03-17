@@ -181,5 +181,5 @@ checksystem
 aptinstall
 pacmaninstall
 dnfinstall
-#copyfiles
+copyfiles
 pause
