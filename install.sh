@@ -106,7 +106,6 @@ fi
 ## Installes the required packages for Arch based systems 
 
 pacmaninstall(){
-if [ $system = "Arch-based" ]; then 
     echo ""
     echo "We have Detected an Arch-based system, we will now install all the required packages"
     sleep 1
@@ -129,7 +128,6 @@ if [ $system = "Arch-based" ]; then
     yay -S grim swappy slurp rofi-emoji
     echo ""
     
-fi
 }
 
 
