@@ -1,5 +1,3 @@
-# hyprlandinstall
-
 <h1>Hyprland Installer </h1>
 
 
