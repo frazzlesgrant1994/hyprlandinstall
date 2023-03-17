@@ -1,4 +1,9 @@
-gdb ninja gcc cmake meson libxcb
+gdb
+ninja
+gcc
+cmake
+meson
+libxcb
 xcb-proto
 xcb-util
 xcb-util-keysyms
