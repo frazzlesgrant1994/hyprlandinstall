@@ -9,6 +9,8 @@
 
 workdir=$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)
 uname=$(whoami)
+
+
 ### Functions #####
 #
 #
@@ -129,7 +131,7 @@ if [ $system = "Arch-based" ]; then
     yaycheck
     sleep 1
     echo ""
-    yay -S gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info
+    yay -S gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info sway
     yay -S hyprland-git rofi dunst kitty swaybg swaylock-fancy-git swayidle pamixer light brillo
     yay -S bc blueberry bluez coreutils dbus findutils gawk gnunet jaq light networkmanager network-manager-applet pavucontrol playerctl procps ripgrep socat udev upower util-linux wget wireplumber wlogout eww-wayland pipewire-pulse
     yay -S waybar-hyprland
@@ -179,5 +181,5 @@ checksystem
 aptinstall
 pacmaninstall
 dnfinstall
-copyfiles
+#copyfiles
 pause
