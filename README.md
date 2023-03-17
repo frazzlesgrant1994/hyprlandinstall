@@ -52,9 +52,8 @@ Although Hyprland is pretty stable, it may have some bugs.
 - Drawing tablet support
 - Native IME + Input panels support
 - and much more...
+<br>
 
-<br>
-<br>
 Resorce [hyprland](https://github.com/hyprwm/Hyprland)
 
 
