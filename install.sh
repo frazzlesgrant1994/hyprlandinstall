@@ -100,6 +100,17 @@ fi
 
 }
 
+rsync(){
+if command -v yay > /dev/null
+then
+ echo "Rsync is already installed"
+ else 
+   sudo pacman -S rsync --noconfirm  
+fi
+
+}
+
+
 ########################################
 
 
@@ -111,12 +122,13 @@ pacmaninstall(){
     sleep 1
     echo ""
     yaycheck
+    rsync
     sleep 1
 ### Install Hyprland-git 
     yay -S hyprland-git
 
 ### Install base Depends
-    yay -S rsync rofi dunst kitty swaybg swaylock-fancy-git swayidle pamixer light brillo
+    yay -S rofi dunst kitty swaybg swaylock-fancy-git swayidle pamixer light brillo
 
 ### Install eww bar Depends
     yay -S bc blueberry bluez coreutils dbus findutils gawk gnunet jaq light networkmanager network-manager-applet pavucontrol playerctl procps ripgrep socat udev upower util-linux wget wireplumber wlogout eww-wayland pipewire-pulse
@@ -143,7 +155,6 @@ fc-cache -fv
 checksystem(){
 if command -v pacman > /dev/null
 then
-    yaycheck
     pacmaninstall    
 fi
 
