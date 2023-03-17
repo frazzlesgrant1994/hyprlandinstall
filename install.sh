@@ -104,10 +104,9 @@ rsynccheck(){
 if command -v rsync > /dev/null
 then
  echo "Rsync is already installed"
- else 
-   sudo pacman -S rsync --noconfirm 
+ else
+   sudo pacman -S rsync --noconfirm
 fi
-
 }
 
 ########################################
