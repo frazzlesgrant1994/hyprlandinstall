@@ -1,6 +1,6 @@
 # Hyprland Installer
 
- > :warning: **WARNING:** This is still being created so use with caution and expect some issues. 
+ > :warning: **WARNING:** This script is still being created so use with caution and expect some issues. 
 
 
 # Table of contents
