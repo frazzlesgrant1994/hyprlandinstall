@@ -1,10 +1,10 @@
 {
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 24, // Waybar height (to be removed for auto height)
     "margin-top": 2,
     "margin-left":10,
     "margin-bottom": 2,
     "margin-right": 10,
-    "spacing": 5, // Gaps between modules (4px)
+    "spacing": 10, // Gaps between modules (4px)
     "modules-left": ["custom/launcher", "cpu", "memory", "wlr/workspaces", "custom/weather"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "backlight", "pulseaudio", "network", "custom/power-menu"],
@@ -12,14 +12,8 @@
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "urgent": "",
-        "active": "",
-        "default": ""
+        "active": "  ",
+        "default": "  "
       }
     },
     "hyprland/window": {
@@ -120,8 +114,8 @@
         "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh",
     }, 
     "custom/launcher": {
-        "format": " <span color='#6a92d7'> </span>",
-        "on-click": "rofi -show drun",
+        "format": "",
+        "on-click": "rofi -show drun &",
     },
 }
 
