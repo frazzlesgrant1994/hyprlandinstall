@@ -130,7 +130,7 @@ if [ $system = "Arch-based" ]; then
     echo ""
     yaycheck
     sleep 1
-    yay -S - < archpkglist.txt
+    yay -S --needed - < archpkglist.txt
     echo ""
     
 fi
