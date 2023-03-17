@@ -1,9 +1,9 @@
 # hyprlandinstall
-Hyprland Installer with theme
+
+<h1>Hyprland Installer </h1>
 
 
-CAUTION: Still being test so will contain bugs. 
+**_WARNING:_** This is still being created so use with caution and expect some issues. 
 
-Documentation coming soon.
 
 
