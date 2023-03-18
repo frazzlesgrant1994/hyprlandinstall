@@ -74,7 +74,10 @@ configured usable desktop.
 - Imports a custom themed config
 
 
+## Futrure script addons (For now)
 
+- Add common software (Choose what you want and what you dont want)
+- Ability to change themes
 
 
 
