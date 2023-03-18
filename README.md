@@ -61,7 +61,18 @@ Resorce [hyprland](https://github.com/hyprwm/Hyprland)
 ## What is Hyprland installer <a name="aboutinstall">
 <br>
 
-Hyprland installer is a set of scripts that make the install process easier. 
+Hyprland installer is a set of scripts that make the install process easier and quicker. 
+The aim of Hyprland install is to be able to go from a "clean" install, to a fully 
+configured usable desktop.  
+
+<h1>Script features</h1>
+
+- Distrubution detection (To Ensure it won't run on a non Arch system)
+- Installs the Yay Aur helper. (If not already installed)
+- Downloads and installs the latest dependencys required by Hyprland and Waybar
+- Installs Hyprland and Waybar 
+- Imports a custom themed config
+
 
 
 
