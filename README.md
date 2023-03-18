@@ -69,7 +69,7 @@ configured usable desktop.
 
 - Distribution detection (To ensure it won't run on a non Arch system)
 - Installs the Yay Aur helper. (If not already installed)
-- Downloads and installs the latest dependencys required by Hyprland and Waybar
+- Downloads and installs the latest dependencies required by Hyprland and Waybar
 - Installs Hyprland and Waybar 
 - Imports a custom themed config
 
