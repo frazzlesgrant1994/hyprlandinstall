@@ -67,7 +67,7 @@ configured usable desktop.
 
 <h1>Script features</h1>
 
-- Distribution detection (To Ensure it won't run on a non Arch system)
+- Distribution detection (To ensure it won't run on a non Arch system)
 - Installs the Yay Aur helper. (If not already installed)
 - Downloads and installs the latest dependencys required by Hyprland and Waybar
 - Installs Hyprland and Waybar 
