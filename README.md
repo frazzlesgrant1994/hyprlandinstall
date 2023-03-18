@@ -82,6 +82,11 @@ configured usable desktop.
 
 # Install guide <a name="instalation">
 
+```bash
+git clone https://github.com/frazzlesgrant1994/hyprlandinstall.git
+cd hyprlandinstall
+bash install
+```
 
 
 
