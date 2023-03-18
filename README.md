@@ -25,7 +25,7 @@ Hyprland is still in pretty early development compared to some other Wayland com
 
 Although Hyprland is pretty stable, it may have some bugs.
 
-# Features
+## Features
 
 - Easily expandable and readable codebase
 - Plugin support
@@ -65,7 +65,7 @@ Hyprland installer is a set of scripts that make the install process easier and 
 The aim of Hyprland install is to be able to go from a "clean" install, to a fully 
 configured usable desktop.  
 
-<h1>Script features</h1>
+## Script features
 
 - Distribution detection (To ensure it won't run on a non Arch system)
 - Installs the Yay Aur helper. (If not already installed)
