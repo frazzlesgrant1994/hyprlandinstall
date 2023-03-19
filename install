@@ -138,7 +138,7 @@ pacmaninstall(){
     yay -S waybar-hyprland
 
 ### Other Utils (screenshot, emoji)
-    yay -S grim swappy slurp rofi-emoji
+    yay -S grim swappy slurp rofi-emoji sddm-git polkit-kde-agent
     echo ""
     
 }
