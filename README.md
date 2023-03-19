@@ -96,6 +96,7 @@ bash install
 
 # Keybinds <a name="keybinds">
 
+## Aplications
 - SUPER, BACKSPACE , kills current window
 - SUPER, W, exec , opens web browser
 - SUPER,F,fullscreen , current window to full screen
@@ -109,9 +110,11 @@ bash install
 - SUPER,ALT,L , screen lock
 - CTRL,ALT,DELETE , opens power menu
 - SUPER,SHIFT,C , colour picker
-- SUPER,T , toggle floating for active window
 - SUPER,SHIFT,S , screenshot tool
 - SUPER,R ,tanger termainl file manager
+
+## Window
+- SUPER,T , toggle floating for active window
 - SUPER,j , change active window (Down)
 - SUPER,k , change active window (Up)
 - SUPER,h , change active window (Left)
@@ -124,6 +127,8 @@ bash install
 - SUPER,SHIFT,l , move active window (Right)
 - SUPER,SHIFT,k , move active window (Up)
 - SUPER,SHIFT,j , move active window (Down)
+
+## Workspace
 - SUPER,1 , move to workspace (1)
 - SUPER,2 , move to workspace (2)
 - SUPER,3 , move to workspace (3)
