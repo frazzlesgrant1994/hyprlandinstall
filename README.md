@@ -2,6 +2,7 @@
 
  > :warning: **WARNING:** This script is still being created so use with caution and expect some issues. 
 
+![Screenshot](https://github.com/frazzlesgrant1994/hyprlandinstall/blob/main/screenshots/Screenshot1.png)
 
 # Table of contents
 1. [What is Hyprland?](#about)
