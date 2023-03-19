@@ -8,7 +8,7 @@
 1. [What is Hyprland?](#about)
 2. [What is Hyprland installer?](#aboutinstall)
 3. [Instalation](#instalation)
-4. [Keybinds] (#keybinds)
+4. [Keybinds](#keybinds)
 5. [Configuration](#config)
 
 
