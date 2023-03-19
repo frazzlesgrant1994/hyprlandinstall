@@ -146,10 +146,10 @@ pacmaninstall(){
 
 ##########################################
 
-## copys config files to home dir 
+## copies config files to home dir 
 copyfiles(){
 mv assets/fonts ~/.fonts
-rsync -a assets/* ~/.config/
+cp -r assets/* ~/.config/
 fc-cache -fv
 }
 
