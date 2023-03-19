@@ -111,7 +111,7 @@ bash install
 - CTRL,ALT,DELETE , opens power menu
 - SUPER,SHIFT,C , colour picker
 - SUPER,SHIFT,S , screenshot tool
-- SUPER,R ,tanger termainl file manager
+- SUPER,R , ranger termainl file manager
 
 ## Window
 - SUPER,T , toggle floating for active window
