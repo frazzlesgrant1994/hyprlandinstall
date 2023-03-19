@@ -5,12 +5,13 @@
     "margin-bottom": 2,
     "margin-right": 10,
     "spacing": 10, // Gaps between modules (4px)
-    "modules-left": ["custom/launcher", "cpu", "memory", "wlr/workspaces", "custom/weather"],
+    "modules-left": ["custom/launcher", "cpu", "memory", "wlr/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "backlight", "pulseaudio", "network", "custom/power-menu"],
+    "modules-right": ["tray", "backlight","custom/updates", "pulseaudio", "network", "custom/power-menu"],
     "wlr/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
+      "all-outputs": true,
       "format-icons": {
         "active": "  ",
         "default": "  "
@@ -30,13 +31,13 @@
 
     "cpu": {
       "interval": 10,
-      "format": " {}%",
+      "format": "CPU {}%",
       "max-length": 10,
       "on-click": "",
     },
     "memory": {
         "interval": 30,
-        "format": " {}%",
+        "format": "Ram {}%",
         "format-alt":" {used:0.1f}G",
         "max-length": 10,
     },
@@ -53,7 +54,11 @@
         "on-click": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
         "format-disconnected": "Disconnected  ",
     },
-
+    "custom/updates": {
+        "exec": "pacman -Qu | wc -l",
+        "interval": 7200,
+        "format": " {}"
+    },
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "  {volume}%",
@@ -100,7 +105,6 @@
       "return-type": "json",
       "on-click": "xdg-open https://weather.com/en-GB/weather/today/l/529904feb9dc141802c63fb154367a160d281ccc8226a5e20e0e39c23e749913"
     },   
-
    "custom/spotify": {
     "exec": "python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
     "format": "{}  ",
@@ -114,8 +118,9 @@
         "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh",
     }, 
     "custom/launcher": {
-        "format": "",
+        "format": " ",
         "on-click": "rofi -show drun &",
+	
     },
 }
 

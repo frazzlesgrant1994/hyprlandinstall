@@ -77,7 +77,8 @@ window#waybar.hidden {
 #custom-weather.rainyNight,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
-#custom-weather.default {
+#custom-weather.default,
+#custom-updates {
   padding: 0 10px;
   color: #e5e5e5;
   /* color: #bf616a; */
@@ -308,4 +309,8 @@ label:focus {
 
 #keyboard-state > label.locked {
   background: rgba(0, 0, 0, 0.2);
+}
+
+#custom-updates {
+  color: #f5c2e7;
 }

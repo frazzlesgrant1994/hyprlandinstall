@@ -87,14 +87,9 @@ case ${chosen} in
     $reboot)
 		run_cmd --reboot
         ;;
-    $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
-		elif [[ -x '/usr/bin/Hyprland' ]]; then
-		  swaylock	
-		fi
+    $lock)	
+	  swaylock	
+		
         ;;
     $suspend)
 		run_cmd --suspend
