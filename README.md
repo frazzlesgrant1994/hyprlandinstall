@@ -7,7 +7,7 @@
 # Table of contents
 1. [What is Hyprland?](#about)
 2. [What is Hyprland installer?](#aboutinstall)
-3. [Instalation](#instalation)
+3. [Install guide](#instalation)
 4. [Keybinds](#keybinds)
 5. [Configuration](#config)
 
