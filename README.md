@@ -115,7 +115,7 @@ bash install
 - SUPER + SHIFT + Q = quit session
 
 ## Window
-- SUPER + BACKSPACE = kills current window
+- SUPER + Q = kills current window
 - ALT + TAB = switch between open windows
 - SUPER + F = current window to full screen
 - SUPER + T = toggle floating for active window
